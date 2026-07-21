@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "mcp-server-scaffold"
+version = "1.0.0"
+description = "Generate complete MCP (Model Context Protocol) server projects from a single command"
+authors = [
+    {name = "ShadowCraft AI", email = "xxtheshadowcraft@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["mcp", "model-context-protocol", "scaffold", "generator", "cli", "developer-tools"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "click>=8.0",
+]
+
+[project.scripts]
+mcp-scaffold = "mcp_scaffold.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ZachDreamZ/mcp-server-scaffold"
+Repository = "https://github.com/ZachDreamZ/mcp-server-scaffold"
+Documentation = "https://zachdreamz.github.io/mcp-server-scaffold/"
+"Buy Full Version" = "https://shadowcraft41.gumroad.com/l/fskmzv"
+
+[tool.setuptools.packages.find]
+include = ["mcp_scaffold*"]
